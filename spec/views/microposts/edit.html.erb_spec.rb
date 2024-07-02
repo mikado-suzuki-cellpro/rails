@@ -1,6 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe "microposts/edit", type: :view do
+  let(:user) {
+    User.create!(
+      name: name,
+      email: email
+      )
+    }
   let(:micropost) {
     Micropost.create!(
       content: "MyText",
