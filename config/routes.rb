@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :microposts
+  resources :users
   # get "places/index"
   get "/places", to: "places#index"
   get "welcome/index"
@@ -13,5 +15,6 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  root "welcome#index"
+  # root "welcome#index"
+  root "users#index"
 end
