@@ -70,6 +70,9 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   gem "rack-mini-profiler"
+
+  # automatically launch specs when files are modified [https://github.com/guard/guard-rspec]
+  gem 'guard-rspec', require: false
 end
 
 group :test do

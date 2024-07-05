@@ -16,11 +16,10 @@ Ruby on Rails7.2環境
 2. devContainer起動
     - F1キー　→「Dev Container: Open Folder in Container」を選択し、しばらく待つ
 
-<!-- 導入予定 -->
-<!-- 3. Guard起動　…ファイル変更を察知して、rspecを流してくれるやつ
+3. Guard起動　…ファイル変更を察知して、rspecを流してくれるやつ
    ```
-   $ bundle exec guard
-   ``` -->
+   $ bundle exec guard -p
+   ```
 ## 環境構築備忘録
 Rails入りdockerテンプレートをgitからクローンしてきた。 <br />
 作業は基本的にVScode上で行った。 <br />
@@ -31,6 +30,10 @@ Rails入りdockerテンプレートをgitからクローンしてきた。 <br /
 
 #### Dev Container環境 手順
 1. [Dev Containers tutorial](https://code.visualstudio.com/docs/devcontainers/tutorial)を参考に進める
+    * [既存のDocker環境(rails7-on-docker)をDevContainer化した話](https://qiita.com/msuzuki_cellpromote/items/49e0d0c713d90b797940)
+
+#### Guard
+1. [guard-rspec/README.md](https://github.com/guard/guard-rspec/blob/master/README.md)
 
 ## メモ
 * docker template：[rails7-on-docker](https://github.com/ryanwi/rails7-on-docker)
