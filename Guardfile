@@ -24,7 +24,7 @@
 #  * zeus: 'zeus rspec' (requires the server to be started separately)
 #  * 'just' rspec: 'rspec'
 
-guard :rspec, cmd: "bundle exec rspec", spec_paths: [ '../hello_app/' ] do
+guard :rspec, cmd: "bundle exec rspec" do
   require "guard/rspec/dsl"
   dsl = Guard::RSpec::Dsl.new(self)
 
@@ -48,13 +48,16 @@ guard :rspec, cmd: "bundle exec rspec", spec_paths: [ '../hello_app/' ] do
   watch(rails.controllers) do |m|
     [
       rspec.spec.call("routing/#{m[1]}_routing"),
-      rspec.spec.call("requests"),
-      # rspec.spec.call("controllers/#{m[1]}_controller"),
+      rspec.spec.call("controllers/#{m[1]}_controller"),
       rspec.spec.call("acceptance/#{m[1]}")
     ]
   end
 
+  # 追加
+  # controller
   watch(rails.controllers) { "#{rspec.spec_dir}/requests" }
+
+  # watch("app/controllers/static_pages_controller.rb") { "spec/requests/static_pages_spec.rb" }
 
   # Rails config changes
   watch(rails.spec_helper)     { rspec.spec_dir }
