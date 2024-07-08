@@ -16,10 +16,15 @@ Ruby on Rails7.2環境
 2. devContainer起動
     - F1キー　→「Dev Container: Open Folder in Container」を選択し、しばらく待つ
 
-3. Guard起動　…ファイル変更を察知して、rspecを流してくれるやつ
+3. Guard　…ファイル変更を察知して、rspecを流してくれるやつ
    ```
+   # 起動
    $ bundle exec guard -p
+
+   # 終了
+   $ exit
    ```
+   
 ## 環境構築備忘録
 Rails入りdockerテンプレートをgitからクローンしてきた。 <br />
 作業は基本的にVScode上で行った。 <br />
